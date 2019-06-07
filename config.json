@@ -1,0 +1,36 @@
+{
+  "name": "tingg.io Bridge",
+  "version": "0.91",
+  "slug": "tingg_io_bridge",
+  "description": "Connects your devices to the tingg.io platform",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "homeassistant_api": true,
+  "options": {
+    "thing_id": "123x1x12-x1x1-1234-xx1x-12x123x1234x",
+    "thing_key": "a1kv80x1xwxhikfxq6ady7pxfzxfbb2y",
+    "update_interval_seconds": 60,
+    "thing_entities": [
+      {
+        "tingg_resource": "temperature",
+        "hass_id": "sensor.temperature_outside"
+      },
+      {
+        "tingg_resource": "humidity",
+        "hass_id": "sensor.humidity_outside"
+      }
+    ]
+  },
+  "schema": {
+    "thing_id": "str",
+    "thing_key": "str",
+    "update_interval_seconds": "int",
+    "thing_entities": [
+      {
+        "tingg_resource": "str",
+        "hass_id": "str"
+      }
+    ]
+  }
+}
